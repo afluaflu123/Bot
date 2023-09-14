@@ -1,12 +1,12 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/wagger1/Afsal.git /Afsal
+  git clone https://github.com/Hacker-Jr-TG/K-bot.git /Team-KL
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /Afsal
+  git clone $UPSTREAM_REPO /Team-KL
 fi
-cd /Afsal
+cd /Team-KL
 pip3 install -U -r requirements.txt
-echo "Fuck youuu...."
+echo "Starting DQ-The-File-Donor...."
 python3 bot.py
