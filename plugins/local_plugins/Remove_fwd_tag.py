@@ -15,7 +15,7 @@ Bot = Client(
      api_hash = os.environ["API_HASH"]
 )
 
-@Client.on_message(filters.forwarded & filters.group & filters.channel & filters.regex & filters.incoming)
+@Client.on_message(filters.forwarded & filters.group & filters.channel & filters.incoming)
 async def channel_tag(bot, message):
     try:
         chat_id = message.chat.id
@@ -25,6 +25,6 @@ async def channel_tag(bot, message):
         await message.reply_text("Oops , Recheck My Admin Permissions & Try Again")
 
 
-@Client.on_message(filters.forwarded & filters.group & filters.regex & filters.private & filters.incoming)
+@Client.on_message(filters.forwarded & filters.group & filters.private & filters.incoming)
 async def forward(bot, message):
 	await message.delete()
